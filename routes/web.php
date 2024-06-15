@@ -40,3 +40,11 @@ Route::get('registration',function(){
 Route::get('login',function(){
     return view('login');
 })->name("login");
+
+Route::get('/user/{id}',function($id){
+    return "user ID: $id";
+});
+
+Route::get('/example/{variable?}', function ($variable = null) {
+    return "user ID: $variable";
+});
